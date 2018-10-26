@@ -87,96 +87,41 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="js"><a href="#js" class="headerlink" title="js"></a>js</h2><p>===</p>
-<h3 id="创建dom"><a href="#创建dom" class="headerlink" title="创建dom"></a>创建dom</h3><blockquote>
-<p>var p = document.creatElement(“p”);</p>
-</blockquote>
-<h3 id="添加文本节点"><a href="#添加文本节点" class="headerlink" title="添加文本节点"></a>添加文本节点</h3><blockquote>
-<p>var node = document.creatTextNode(“haha”);<br>p.appendChild(node);</p>
-</blockquote>
-<h3 id="获取dom"><a href="#获取dom" class="headerlink" title="获取dom"></a>获取dom</h3><h4 id="id-获取"><a href="#id-获取" class="headerlink" title="id 获取"></a>id 获取</h4><blockquote>
-<p>document.getElementsById(“div”)</p>
-</blockquote>
-<h4 id="通过name获取"><a href="#通过name获取" class="headerlink" title="通过name获取"></a>通过name获取</h4><blockquote>
-<p>document.getElementsByName(“name”)</p>
-</blockquote>
-<h4 id="通过标签名"><a href="#通过标签名" class="headerlink" title="通过标签名"></a>通过标签名</h4><blockquote>
-<p>document.getElementsByTagName(“p”);</p>
-</blockquote>
-<h4 id="通过类名获取"><a href="#通过类名获取" class="headerlink" title="通过类名获取"></a>通过类名获取</h4><blockquote>
-<p>document.getElementsByClassName(“”);<br>ie8 以前不兼容</p>
-</blockquote>
-<h4 id="获取html"><a href="#获取html" class="headerlink" title="获取html"></a>获取html</h4><blockquote>
-<p>document.documentElement</p>
-</blockquote>
-<h4 id="获取body"><a href="#获取body" class="headerlink" title="获取body"></a>获取body</h4><blockquote>
-<p>document.body</p>
-</blockquote>
-<h4 id="通过选择器获取一个元素"><a href="#通过选择器获取一个元素" class="headerlink" title="通过选择器获取一个元素"></a>通过选择器获取一个元素</h4><blockquote>
-<p>document.querySelector(“#demo”);<br>document.querySelector(“.demo”);<br>document.querySelector(“p”);<br>document.querySelector(“p.example”);<br>document.querySelector(“a[target]”);<br>不兼容IE7以及以前版本</p>
-</blockquote>
-<h4 id="返回数组"><a href="#返回数组" class="headerlink" title="返回数组"></a>返回数组</h4><blockquote>
-<p>querySelectorAll(“.demo”);<br>querySelectorAll(“p”);<br>querySelectorAll(“p.example”)<br>querySelectorAll(“a[target]”);<br>ie8 以前不兼容</p>
-</blockquote>
-<p>####query 出的是静态的，不会随着节点增减而变化</p>
-<h3 id="js样式设置"><a href="#js样式设置" class="headerlink" title="js样式设置"></a>js样式设置</h3><h4 id="直接设置style的属性-设置-important值无效"><a href="#直接设置style的属性-设置-important值无效" class="headerlink" title="直接设置style的属性 (设置 !important值无效)"></a>直接设置style的属性 (设置 !important值无效)</h4><blockquote>
-<p>element.style.height = ‘100px’;<br>element.style[‘text-align’] = ‘100px’;<br>element.style.textAlign= ‘100px’;</p>
-</blockquote>
-<h4 id="直接设置属性（只能用于某些属性，相关样式会自动识别）"><a href="#直接设置属性（只能用于某些属性，相关样式会自动识别）" class="headerlink" title="直接设置属性（只能用于某些属性，相关样式会自动识别）"></a>直接设置属性（只能用于某些属性，相关样式会自动识别）</h4><blockquote>
-<p>element.setAttribute(‘height’, 100);<br>element.setAttribute(‘height’, ‘100px’);</p>
-</blockquote>
-<h4 id="设置style的属性"><a href="#设置style的属性" class="headerlink" title="设置style的属性"></a>设置style的属性</h4><blockquote>
-<p>element.setAttribute(‘style’, ‘height: 100px !important’);</p>
-</blockquote>
-<h4 id="setProperty"><a href="#setProperty" class="headerlink" title="setProperty"></a>setProperty</h4><blockquote>
-<p>element.style.setProperty(‘height’, ‘300px’, ‘important’);</p>
-</blockquote>
-<h4 id="改变class"><a href="#改变class" class="headerlink" title="改变class"></a>改变class</h4><blockquote>
-<p>element.className += ‘blue fb’;</p>
-</blockquote>
-<h4 id="设置cssText"><a href="#设置cssText" class="headerlink" title="设置cssText"></a>设置cssText</h4><blockquote>
-<p>element.style.cssText += ‘height: 100px !important’;</p>
-</blockquote>
-<h3 id="删除dom"><a href="#删除dom" class="headerlink" title="删除dom"></a>删除dom</h3><h4 id="必须获取父级元素"><a href="#必须获取父级元素" class="headerlink" title="必须获取父级元素"></a>必须获取父级元素</h4><blockquote>
-<p>var parent = document.getElementById(“parent”);<br>var child = document.getElementById(“child”);<br>parent.removeChild(child);</p>
-</blockquote>
-<h4 id="不引用父元素"><a href="#不引用父元素" class="headerlink" title="不引用父元素"></a>不引用父元素</h4><blockquote>
-<p>child.parentNode.removeChild(“child”); </p>
-</blockquote>
-<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><blockquote>
-<p>document.getElementById(“demo”).onclick = function(){}</p>
-</blockquote>
-<blockquote>
-<p>document.getElementById(“demo”).addEventListener(‘click’,function(){})<br>document.getElementById(“demo”).attachEvent(‘click’,function(){})  //ie兼容</p>
-</blockquote>
-<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><blockquote>
-<p>利用事件冒泡 解决大量绑定问题</p>
-</blockquote>
+        <h1 id="js"><a href="#js" class="headerlink" title="js"></a>js</h1><h3 id="创建dom"><a href="#创建dom" class="headerlink" title="创建dom"></a>创建dom</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var p = document.creatElement(&quot;p&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="添加文本节点"><a href="#添加文本节点" class="headerlink" title="添加文本节点"></a>添加文本节点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var node = document.creatTextNode(&quot;haha&quot;);</span><br><span class="line">p.appendChild(node);</span><br></pre></td></tr></table></figure>
+<h3 id="获取dom"><a href="#获取dom" class="headerlink" title="获取dom"></a>获取dom</h3><p>id 获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsById(&quot;div&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>通过name获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByName(&quot;name&quot;)</span><br></pre></td></tr></table></figure></p>
+<p>通过标签名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByTagName(&quot;p&quot;);</span><br></pre></td></tr></table></figure></p>
+<p>通过类名获取<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementsByClassName(&quot;&quot;);</span><br><span class="line">ie8 以前不兼容</span><br></pre></td></tr></table></figure></p>
+<p>获取html<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.documentElement</span><br></pre></td></tr></table></figure></p>
+<p>获取body<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.body</span><br></pre></td></tr></table></figure></p>
+<p>通过选择器获取一个元素<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">document.querySelector(&quot;#demo&quot;);</span><br><span class="line">document.querySelector(&quot;.demo&quot;);</span><br><span class="line">document.querySelector(&quot;p&quot;);</span><br><span class="line">document.querySelector(&quot;p.example&quot;);</span><br><span class="line">document.querySelector(&quot;a[target]&quot;);</span><br><span class="line">不兼容IE7以及以前版本</span><br></pre></td></tr></table></figure></p>
+<p>返回数组<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">querySelectorAll(&quot;.demo&quot;);</span><br><span class="line">querySelectorAll(&quot;p&quot;);</span><br><span class="line">querySelectorAll(&quot;p.example&quot;)</span><br><span class="line">querySelectorAll(&quot;a[target]&quot;);</span><br><span class="line">ie8 以前不兼容</span><br></pre></td></tr></table></figure></p>
+<p><code>query 出的是静态的，不会随着节点增减而变化</code></p>
+<h3 id="js样式设置"><a href="#js样式设置" class="headerlink" title="js样式设置"></a>js样式设置</h3><p>直接设置style的属性 (设置 !important值无效)<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">element.style.height = &apos;100px&apos;;</span><br><span class="line">element.style[&apos;text-align&apos;] = &apos;100px&apos;;</span><br><span class="line">element.style.textAlign= &apos;100px&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>直接设置属性（只能用于某些属性，相关样式会自动识别）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">element.setAttribute(&apos;height&apos;, 100);</span><br><span class="line">element.setAttribute(&apos;height&apos;, &apos;100px&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>设置style的属性<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.setAttribute(&apos;style&apos;, &apos;height: 100px !important&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>setProperty<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.style.setProperty(&apos;height&apos;, &apos;300px&apos;, &apos;important&apos;);</span><br></pre></td></tr></table></figure></p>
+<p>改变class<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.className += &apos;blue fb&apos;;</span><br></pre></td></tr></table></figure></p>
+<p>设置cssText<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">element.style.cssText += &apos;height: 100px !important&apos;;</span><br></pre></td></tr></table></figure></p>
+<h3 id="删除dom"><a href="#删除dom" class="headerlink" title="删除dom"></a>删除dom</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var parent = document.getElementById(&quot;parent&quot;);</span><br><span class="line">var child = document.getElementById(&quot;child&quot;);</span><br><span class="line">parent.removeChild(child);</span><br><span class="line"></span><br><span class="line">不引用父元素</span><br><span class="line">child.parentNode.removeChild(&quot;child&quot;);</span><br></pre></td></tr></table></figure>
+<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;demo&quot;).onclick = function()&#123;&#125;</span><br><span class="line"></span><br><span class="line">document.getElementById(&quot;demo&quot;).addEventListener(&apos;click&apos;,function()&#123;&#125;)</span><br><span class="line">document.getElementById(&quot;demo&quot;).attachEvent(&apos;click&apos;,function()&#123;&#125;)  //ie兼容</span><br></pre></td></tr></table></figure>
+<h3 id="事件委托"><a href="#事件委托" class="headerlink" title="事件委托"></a>事件委托</h3><p>利用事件冒泡 解决大量绑定问题</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Contact.prototype.init = function()&#123;</span><br><span class="line">    var lis = document.querySelector(&apos;#J_List&apos;);</span><br><span class="line">    lis.addEventListener(&apos;click&apos;, function(e)&#123;</span><br><span class="line">        var target = e.target || e.srcElement;</span><br><span class="line">        if (!!target &amp;&amp; target.className.toLowerCase()===&apos;user-delete&apos;) &#123;               target.parentNode.parentNode.removeChild(target.parentNode);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<blockquote>
 <p>e.srcElement //ie</p>
-</blockquote>
-<h3 id="js禁止冒泡"><a href="#js禁止冒泡" class="headerlink" title="js禁止冒泡"></a>js禁止冒泡</h3><blockquote>
-<p> event.stopPropagation();</p>
-</blockquote>
-<h3 id="js-获取子节点"><a href="#js-获取子节点" class="headerlink" title="js 获取子节点"></a>js 获取子节点</h3><blockquote>
-<p>var getFirstChild = document.getElementById(“test”).children[0];<br>var getFirstChild = document.getElementById(“test”).firstElementChild;<br> var getLastChildB = document.getElementById(“test”).lastElementChild;</p>
-</blockquote>
-<h3 id="js-获取父节点"><a href="#js-获取父节点" class="headerlink" title="js 获取父节点"></a>js 获取父节点</h3><blockquote>
-<p>   var p  = document.getElementById(“test”).parentNode;</p>
-</blockquote>
-<h3 id="js获取兄弟节点"><a href="#js获取兄弟节点" class="headerlink" title="js获取兄弟节点"></a>js获取兄弟节点</h3><blockquote>
-<p>document.getElementById(“test”).previousElementSibling;<br>document.getElementById(“test”).nextElementSibling;</p>
-</blockquote>
-<h3 id="js获取屏幕宽高"><a href="#js获取屏幕宽高" class="headerlink" title="js获取屏幕宽高"></a>js获取屏幕宽高</h3><h4 id="body"><a href="#body" class="headerlink" title="body"></a>body</h4><blockquote>
-<p>document.body.clientWidth clientHeight  可见区域的宽高 内容高+padding<br>offsetWidth offsetHeight 内容高+padding+边框</p>
-</blockquote>
-<h4 id="window"><a href="#window" class="headerlink" title="window"></a>window</h4><blockquote>
-<p>window.innerHeight innerWidth 可见区域的宽高<br>window.screen.height width 分辨率<br>outerHeight outerWidth </p>
-</blockquote>
-<blockquote>
+<h3 id="js禁止冒泡"><a href="#js禁止冒泡" class="headerlink" title="js禁止冒泡"></a>js禁止冒泡</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">event.stopPropagation();</span><br></pre></td></tr></table></figure>
+<h3 id="js-获取子节点"><a href="#js-获取子节点" class="headerlink" title="js 获取子节点"></a>js 获取子节点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var getFirstChild = document.getElementById(&quot;test&quot;).children[0];</span><br><span class="line">var getFirstChild = document.getElementById(&quot;test&quot;).firstElementChild;</span><br><span class="line">var getLastChildB = document.getElementById(&quot;test&quot;).lastElementChild;</span><br></pre></td></tr></table></figure>
+<h3 id="js-获取父节点"><a href="#js-获取父节点" class="headerlink" title="js 获取父节点"></a>js 获取父节点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var p  = document.getElementById(&quot;test&quot;).parentNode;</span><br></pre></td></tr></table></figure>
+<h3 id="js获取兄弟节点"><a href="#js获取兄弟节点" class="headerlink" title="js获取兄弟节点"></a>js获取兄弟节点</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.getElementById(&quot;test&quot;).previousElementSibling;</span><br><span class="line">document.getElementById(&quot;test&quot;).nextElementSibling;</span><br></pre></td></tr></table></figure>
+<h3 id="js获取屏幕宽高"><a href="#js获取屏幕宽高" class="headerlink" title="js获取屏幕宽高"></a>js获取屏幕宽高</h3><ul>
+<li><p>body</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">document.body.clientWidth clientHeight  可见区域的宽高 内容高+padding</span><br><span class="line">offsetWidth offsetHeight 内容高+padding+边框</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>window</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.innerHeight innerWidth 可见区域的宽高</span><br><span class="line">window.screen.height width 分辨率</span><br><span class="line">outerHeight outerWidth</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
 <p>scrollTop 滚动条卷曲长度<br>offsetTop 相对于版面或由 offsetTop 属性指定的父坐标的计算顶端位置 </p>
-</blockquote>
 
       
     </div>
