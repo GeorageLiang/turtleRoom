@@ -229,269 +229,128 @@
       
         <h2 id="systerm-config"><a href="#systerm-config" class="headerlink" title="systerm-config"></a>systerm-config</h2><hr>
 <ul>
-<li><p>$staticFileVersion</p>
-<blockquote>
-<p>静态资源版本号</p>
-</blockquote>
+<li><p>$staticFileVersion<br>静态资源版本号</p>
 </li>
-<li><p>$cdnFileVersion</p>
-<blockquote>
-<p>cdn （静态资源版本号） 针对静态文件打包部署</p>
-</blockquote>
+<li><p>$cdnFileVersion<br>cdn （静态资源版本号） 针对静态文件打包部署</p>
 </li>
-<li><p>$ctx   </p>
-<blockquote>
-<p>$requestContext.contextPath   CONTEXT_PATH   (ajax请求头部) </p>
-</blockquote>
+<li><p>$ctx<br>$requestContext.contextPath   CONTEXT_PATH   (ajax请求头部) </p>
 </li>
-<li><p>$imagePrefix</p>
-<blockquote>
-<p>图片路径前缀(上传七牛之后的)</p>
-</blockquote>
+<li><p>$imagePrefix<br>图片路径前缀(上传七牛之后的)</p>
 </li>
-<li><p>$currentDomain</p>
-<blockquote>
-<p>当前环境的主页地址 （home.htm）</p>
-</blockquote>
+<li><p>$currentDomain<br>当前环境的主页地址 （home.htm）</p>
 </li>
-<li><p>$flashLocation</p>
-<blockquote>
-<p>放在七牛上的 flash播放器swf文件地址</p>
-</blockquote>
+<li><p>$flashLocation<br>放在七牛上的 flash播放器swf文件地址</p>
 </li>
-<li><p>$imageAvatarDefault</p>
-<blockquote>
-<p>默认头像图片地址</p>
-</blockquote>
+<li><p>$imageAvatarDefault<br>默认头像图片地址</p>
 </li>
-<li><p>$imageVideoDefault</p>
-<blockquote>
-<p>默认视频列表单项图片地址(长方形))</p>
-</blockquote>
+<li><p>$imageVideoDefault<br>默认视频列表单项图片地址(长方形))</p>
 </li>
-<li><p>$imageVideoDefault2</p>
-<blockquote>
-<p>默认视频列表单项图片地址(正方形))</p>
-</blockquote>
+<li><p>$imageVideoDefault2<br>默认视频列表单项图片地址(正方形))</p>
 </li>
-<li><p>$currentStaticType</p>
-<blockquote>
-<p>1、线上；2、beta环境；3、java开发本地；4、开发环境；5、前端开发本地<br>java 本地更新代码·调试（静态文件在183上）</p>
-</blockquote>
+<li><p>$currentStaticType<br>1、线上；2、beta环境；3、java开发本地；4、开发环境；5、前端开发本地<br>java 本地更新代码·调试（静态文件在183上）</p>
 </li>
-<li><p>$env</p>
-<blockquote>
-<p>静态文件（js，css）链接头部地址</p>
-</blockquote>
+<li><p>$env<br>静态文件（js，css）链接头部地址</p>
 </li>
-<li><p>$titleSuffix</p>
-<blockquote>
-<p>标题后缀</p>
-</blockquote>
+<li><p>$titleSuffix<br>标题后缀</p>
 </li>
-<li><p>$SwitchProtocol</p>
-<blockquote>
-<p>“http”,”https”,””</p>
-</blockquote>
+<li><p>$SwitchProtocol<br>“http”,”https”,””</p>
 </li>
 </ul>
 <hr>
 <h2 id="global-util"><a href="#global-util" class="headerlink" title="global_util"></a>global_util</h2><hr>
 <ul>
-<li><p>#util_jellyimg</p>
-<blockquote>
-<p>($imgSrc $extendInfo $imgDefaultSrc) 1.传入的图片地址，2.“class=‘’”（配置类）3.默认图片链接<br>用于懒加载，配合imageLazyLoad()使用<br>bug : 如果返回的图片链接为 “” 默认图片会被覆盖</p>
-</blockquote>
+<li><p>#util_jellyimg<br>($imgSrc $extendInfo $imgDefaultSrc) 1.传入的图片地址，2.“class=‘’”（配置类）3.默认图片链接<br>用于懒加载，配合imageLazyLoad()使用<br>bug : 如果返回的图片链接为 “” 默认图片会被覆盖</p>
 </li>
-<li><p>#util_imageFormat</p>
-<blockquote>
-<p>($imgSrc $styleName) 1.传入图片地址 2.图片尾缀<br>去掉http，https 为图片添加尾缀 !jellyfishavatar<br>!jellyfishavatar(七牛云样式分割符+样式名称) 用于制定在线图片处理方式</p>
-</blockquote>
+<li><p>#util_imageFormat<br>($imgSrc $styleName) 1.传入图片地址 2.图片尾缀<br>去掉http，https 为图片添加尾缀 !jellyfishavatar<br>!jellyfishavatar(七牛云样式分割符+样式名称) 用于制定在线图片处理方式</p>
 </li>
-<li><p>#replaceProtocol</p>
-<blockquote>
-<p>($value) 去掉图片的前缀<br>功能与util_imageFormat有些重复</p>
-</blockquote>
+<li><p>#replaceProtocol<br>($value) 去掉图片的前缀<br>功能与util_imageFormat有些重复</p>
 </li>
-<li><p>#replaceProtocolStr</p>
-<blockquote>
-<p>($value) 去掉字符串的前缀</p>
-</blockquote>
+<li><p>#replaceProtocolStr<br>($value) 去掉字符串的前缀</p>
 </li>
-<li><p>#replaceRichTextProtocol</p>
-<blockquote>
-<p>富文本去掉图片的前缀<br>基本与replaceProtocolStr一样， 区别在于返回的不是字符串</p>
-</blockquote>
+<li><p>#replaceRichTextProtocol<br>富文本去掉图片的前缀<br>基本与replaceProtocolStr一样， 区别在于返回的不是字符串</p>
 </li>
-<li><p>#util_formatBigNumber</p>
-<blockquote>
-<p>($bigNumber) 用于将数字转成 0.0万，0,</p>
-</blockquote>
+<li><p>#util_formatBigNumber<br>($bigNumber) 用于将数字转成 0.0万，0,</p>
 </li>
-<li><p>#util_formatBigMoney</p>
-<blockquote>
-<p>($bigNumber)1000 to 1,000</p>
-</blockquote>
+<li><p>#util_formatBigMoney<br>($bigNumber)1000 to 1,000</p>
 </li>
-<li><p>#util_newchangeTimeLineTime</p>
-<blockquote>
-<p>($createdTime  $dateType)<br>刚刚,..分钟前,..小时前,..天前</p>
-</blockquote>
+<li><p>#util_newchangeTimeLineTime<br>($createdTime  $dateType)<br>刚刚,..分钟前,..小时前,..天前</p>
 </li>
-<li><p>$dateTool.getSystemTime()</p>
-<blockquote>
-<p>获取系统毫秒数</p>
-</blockquote>
+<li><p>$dateTool.getSystemTime()<br>获取系统毫秒数</p>
 </li>
-<li><p>$createdTime.getTime()</p>
-<blockquote>
-<p>获取毫秒数</p>
-</blockquote>
+<li><p>$createdTime.getTime()<br>获取毫秒数</p>
 </li>
-<li><p>#escapeToolHtml</p>
-<blockquote>
-<p>($value)<br>去掉字符串里的非法字符</p>
-</blockquote>
+<li><p>#escapeToolHtml<br>($value)<br>去掉字符串里的非法字符</p>
 </li>
-<li><p>str.replaceAll(‘&lt;’, ‘&lt;’)</p>
-<blockquote>
-<p>替换所有字符</p>
-</blockquote>
+<li><p>str.replaceAll(‘&lt;’, ‘&lt;’)<br>替换所有字符</p>
 </li>
-<li><p>$value.replace(“http:”,””)</p>
-<blockquote>
-<p>替换字符</p>
-</blockquote>
+<li><p>$value.replace(“http:”,””)<br>替换字符</p>
 </li>
-<li><p>$mathTool.toNumber($bigNumber)</p>
-<blockquote>
-<p>转换成数字</p>
-</blockquote>
+<li><p>$mathTool.toNumber($bigNumber)<br>转换成数字</p>
 </li>
-<li><p>$numberTool.format(‘#0,000’, $intBigNumber)</p>
-<blockquote>
-<p>数字格式化</p>
-</blockquote>
+<li><p>$numberTool.format(‘#0,000’, $intBigNumber)<br>数字格式化</p>
 </li>
-<li><p>$value.contains(“$SwitchProtocol//chushou.tv”)</p>
-<blockquote>
-<p>包含</p>
-</blockquote>
+<li><p>$value.contains(“$SwitchProtocol//chushou.tv”)<br>包含</p>
 </li>
-<li><p>$appVersion.split(“.“)</p>
-<blockquote>
-<p>截断</p>
-</blockquote>
+<li><p>$appVersion.split(“.“)<br>截断</p>
 </li>
-<li><p>$Integer.parseInt()</p>
-<blockquote>
-<p>取整</p>
-</blockquote>
+<li><p>$Integer.parseInt()<br>取整</p>
 </li>
-<li><p>${velocityCount}</p>
-<blockquote>
-<p>foreach 取得index，0开始</p>
-</blockquote>
+<li><p>${velocityCount}<br>foreach 取得index，0开始</p>
 </li>
 <li><p>map遍历</p>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">#foreach($item in $!obj.entrySet())</span><br><span class="line">    $!item.key : $!item.value</span><br><span class="line">#end</span><br><span class="line"></span><br><span class="line">#foreach($item in $obj.keySet())</span><br><span class="line">    $item : $obj.get($item)</span><br><span class="line">#end</span><br></pre></td></tr></table></figure>
-<blockquote>
 <p>问题是按字母排序</p>
-</blockquote>
 <ul>
-<li>#evaluate()<blockquote>
-<p>动态执行</p>
-</blockquote>
-</li>
+<li>#evaluate()<br>动态执行</li>
 </ul>
 <hr>
 <h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><ul>
-<li><p>appKey</p>
-<blockquote>
-<p>“CSAndroid”,”CSIos”</p>
-</blockquote>
+<li><p>appKey<br>“CSAndroid”,”CSIos”</p>
 </li>
-<li><p>CONTEXT_PATH, SERVER_CONTEXT_PATH</p>
-<blockquote>
-<p>$requestContext.contextPath   $ctx  (ajax请求头部) </p>
-</blockquote>
+<li><p>CONTEXT_PATH, SERVER_CONTEXT_PATH<br>$requestContext.contextPath   $ctx  (ajax请求头部) </p>
 </li>
-<li><p>STATIC_PATH</p>
-<blockquote>
-<p>$env 静态文件（js，css）链接头部地址</p>
-</blockquote>
+<li><p>STATIC_PATH<br>$env 静态文件（js，css）链接头部地址</p>
 </li>
-<li><p>PIC_PREFIX_PATH ,MAIN_PIC_PREFIX_PATH</p>
-<blockquote>
-<p>$imagePrefix</p>
-</blockquote>
+<li><p>PIC_PREFIX_PATH ,MAIN_PIC_PREFIX_PATH<br>$imagePrefix</p>
 </li>
-<li><p>G_SWF_VERSION</p>
-<blockquote>
-<p>$flashLocation</p>
-</blockquote>
+<li><p>G_SWF_VERSION<br>$flashLocation</p>
 </li>
-<li><p>CURRENT_STATIC_TYPE</p>
-<blockquote>
-<p>$currentStaticType</p>
-</blockquote>
+<li><p>CURRENT_STATIC_TYPE<br>$currentStaticType</p>
 </li>
-<li><p>AVATAR_DEFAULT</p>
-<blockquote>
-<p>$imageAvatarDefault</p>
-</blockquote>
+<li><p>AVATAR_DEFAULT<br>$imageAvatarDefault</p>
 </li>
-<li><p>LUCK_SERVER_HOST</p>
-<blockquote>
-<p>$luckServerHost (luck服务host)</p>
-</blockquote>
+<li><p>LUCK_SERVER_HOST<br>$luckServerHost (luck服务host)</p>
 </li>
-<li><p>$isInChuShouApp</p>
-<blockquote>
-<p>是否是触手app</p>
-</blockquote>
+<li><p>$isInChuShouApp<br>是否是触手app</p>
 </li>
 <li></li>
 </ul>
 <hr>
 <h2 id="common-vm"><a href="#common-vm" class="headerlink" title="common.vm"></a>common.vm</h2><ul>
-<li><p>#header</p>
-<blockquote>
-<p>$title  $cssList $keywords $headMacroName<br>标题   样式数组  关键字（meta name=”keywords”） headMacroName（动态执行的宏的名字）</p>
-</blockquote>
+<li><p>#header<br>$title  $cssList $keywords $headMacroName<br>标题   样式数组  关键字（meta name=”keywords”） headMacroName（动态执行的宏的名字）</p>
 </li>
-<li><p>百度统计</p>
-<blockquote>
-<p>非app中</p>
+<li><p>百度统计<br>非app中</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var _hmt = _hmt || [];</span><br><span class="line">(function() &#123;</span><br><span class="line">    var hm = document.createElement(&quot;script&quot;);</span><br><span class="line">    hm.src = &quot;$SwitchProtocol//hm.baidu.com/hm.js?c0d39162b8644bbf06f351695f6297ea&quot;;</span><br><span class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">    s.parentNode.insertBefore(hm, s);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
-</blockquote>
 </li>
-<li><p>风控云</p>
-<blockquote>
-<p>非app中</p>
-</blockquote>
+<li><p>风控云<br>非app中</p>
 </li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(function() &#123; window._smConf = &#123;</span><br><span class="line">    organization: &apos;WCZeYdJAYgLrFGIDzkmV&apos;, //需要修改为业务 organization</span><br><span class="line">    staticHost: &apos;static.fengkongcloud.com&apos; &#125;;</span><br><span class="line">    var sm = document.createElement(&quot;script&quot;);</span><br><span class="line">    sm.src = (&apos;https:&apos; === document.location.protocol ? &apos;https:&apos; : &apos;http:&apos;) + &apos;//&apos; + _smConf.staticHost + &apos;/fpv2.js&apos;;</span><br><span class="line">    var s = document.getElementsByTagName(&quot;script&quot;)[0];</span><br><span class="line">    s.parentNode.insertBefore(sm, s);</span><br><span class="line">&#125;)();</span><br></pre></td></tr></table></figure>
 <ul>
-<li></li>
+<li>依赖js</li>
 </ul>
+<p>jquery<br>jquery.cookie.js<br>json2.js(小于ie7)<br>search.js<br>mob-share.js<br>html5shiv.min.js（小于ie9）</p>
 <hr>
 <h2 id="cat-js"><a href="#cat-js" class="headerlink" title="cat.js"></a>cat.js</h2><ul>
-<li>webview<blockquote>
-<p>客户端跳转一个完整的h5页面</p>
-</blockquote>
-</li>
+<li>webview<br>客户端跳转一个完整的h5页面</li>
 </ul>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">android: function() &#123;</span><br><span class="line">    ChuShouJS.switchView(&apos;h5&apos;, &apos;&#123;\&quot;url\&quot;:\&quot;&apos; + params + &apos;\&quot;&#125;&apos;);</span><br><span class="line">&#125;,</span><br><span class="line">ios: function() &#123;</span><br><span class="line">    connectWebViewJavascriptBridge(function(bridge) &#123;</span><br><span class="line">        bridge.callHandler(&apos;switchView&apos;, &#123;</span><br><span class="line">            &apos;name&apos;: &apos;h5&apos;,</span><br><span class="line">            &apos;data&apos;: params</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 <ul>
 <li>innerwebview</li>
 </ul>
-<blockquote>
 <p>客户端跳转半个h5（侧面导航条等）</p>
-</blockquote>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">android: function() &#123;</span><br><span class="line">    ChuShouJS.switchView(&apos;innerH5&apos;, &apos;&#123;\&quot;url\&quot;:\&quot;&apos; + urlAll + &apos;\&quot;&#125;&apos;);</span><br><span class="line">&#125;,</span><br><span class="line">ios: function() &#123;</span><br><span class="line">    connectWebViewJavascriptBridge(function(bridge) &#123;</span><br><span class="line">        bridge.callHandler(&apos;switchView&apos;, &#123;</span><br><span class="line">            &apos;name&apos;: &apos;innerH5&apos;,</span><br><span class="line">            &apos;data&apos;: &apos; &#123;\&quot;url\&quot;:\&quot;&apos; + urlAll + &apos;\&quot;&#125;&apos;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
       
